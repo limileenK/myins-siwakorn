@@ -23,7 +23,40 @@ unsplash.search.photos(keyword, 1, 21)
     });
     //PUT YOUR CODE HERE
 });
-
+router.post('/api/searchUser', (req, res) => {
+    let {
+        username
+    } = req.body;
+    unsplash.users.profile(username, 1)
+        .then(toJson)
+        .then(json => {
+            res.status(200).send(json)
+        })
+        .catch((err) => {
+            console.log("Error Message -->", err);
+            res.status(200).send({
+                "messageError": err
+            })
+        });
+    //PUT YOUR CODE HERE
+});
+router.post('/api/photo', (req, res) => {
+    let {
+         username   
+    } = req.body;
+unsplash.users.photos(username, 1, 12, "latest")
+        .then(toJson)
+        .then(json => {
+            res.status(200).send(json)
+        })
+        .catch((err) => {
+            console.log("Error Message -->", err);
+            res.status(200).send({
+                "messageError": err
+            })
+        });
+    //PUT YOUR CODE HERE
+});
 
 
 

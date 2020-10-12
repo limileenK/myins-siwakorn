@@ -4,13 +4,19 @@ const addImagestoGallery = (res) => {
   res.results.forEach((element) => {
     html += `
     <section class="photo">
+
     <header class="photo__header">
+   
       <div class="photo__header-column">
-        <img class="photo__avatar" src="${element.user.profile_image.small}" />
+       <a href = "profile.html?username=${element.user.username}" >
+        <img class="photo__avatar" src="${element.user.profile_image.small}" /> 
+        </a>
       </div>
       <div class="photo__header-column">
-        <span class="photo__username">${element.user.username}</span>
+        <span class = "photo__username" >
+         <a href = "profile.html?username=${element.user.username}" >${element.user.username}</a></span>
       </div>
+     
     </header>
     <div class="photo__file-container">
       <img src="${element.urls.full}" alt="" class="photo__file" />
