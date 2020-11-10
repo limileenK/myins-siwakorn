@@ -1,5 +1,5 @@
 {
-  "name": "mystagramapi",
+  "name": "kong",
   "version": "1.0.0",
   "description": "Mystagram Using Unsplash API",
   "main": "index.js",
@@ -19,5 +19,13 @@
     "morgan": "^1.9.1",
     "node-fetch": "^2.6.0",
     "unsplash-js": "^6.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limileenK/myinstagram.git"
+  },
+  "bugs": {
+    "url": "https://github.com/limileenK/myinstagram/issues"
+  },
+  "homepage": "https://github.com/limileenK/myinstagram#readme"
 }
